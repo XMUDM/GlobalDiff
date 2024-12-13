@@ -42,7 +42,7 @@ python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --di
 python -u GlobalDiff_srgnn.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty --pretrain_epoch 40
 ```
 
-## BackBone
+## BackBones
 
 GlobalDiff supports direct transfer from CBiT, Bert4Rec, SASRec and SRGNN. In fact, we recommend using the original model's code for training. The relevant code links are as follows:
 https://github.com/hw-du/CBiT/tree/master;
