@@ -1,6 +1,12 @@
 # GlobalDiff
 GlobalDiff is a diffusion-based model designed to enhance sequential recommendation systems. It supports various backbone models like CBIT, Bert4Rec, SASRec and SRGNN, and can be easily adapted to different datasets. This repository includes implementations for ML-1M, KuaiRec, and Beauty datasets.
 ![GlobalDiff](framework1.7.png)
+
+## Set Up
+```
+pip install -r requirements.txt
+```
+
 ## Reproduce the results
 
 ### ML-1M
