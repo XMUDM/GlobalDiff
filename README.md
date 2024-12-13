@@ -6,35 +6,47 @@ GlobalDiff is a diffusion-based model designed to enhance sequential recommendat
 ### ML-1M
 
 ```
-python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m 
+#CBiT
+python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m
+#Bert4Rec
 python -u GlobalDiff_bert.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m
-
+#SasRec
 python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m
 #SRGNN
-python -u GlobalDiff_srgnn.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m --pretrain_epoch 40 --min_rating 4 --min_uc 20 --min_sc 1 --cuda 0 --loss_type mse
+python -u GlobalDiff_srgnn.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code ml-1m --pretrain_epoch 40
 ```
 
 ### KuaiRec Data
 
 ```
-python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou 
-python -u GlobalDiff_bert.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou 
-python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou 
+#CBiT
+python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou
+#Bert4Rec
+python -u GlobalDiff_bert.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou
+#SasRec
+python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou
+#SRGNN
+python -u GlobalDiff_srgnn.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code kuaishou --pretrain_epoch 40
 ```
 
 ### Beauty
 
 ```
-python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty 
-python -u GlobalDiff_bert.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty 
-python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty 
+#CBiT
+python -u GlobalDiff.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty
+#Bert4Rec
+python -u GlobalDiff_bert.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty
+#SasRec
+python -u GlobalDiff_SasRec.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty
+#SRGNN
+python -u GlobalDiff_srgnn.py --timesteps 100 --lr 0.001 --optimizer adamw --diffuser_type Unet --random_seed 0 --dataset_code beauty --pretrain_epoch 40
 ```
 
 ## BackBone
 
-GlobalDiff supports direct transfer from CBiT, Bert4Rec, and SASRec. In fact, we recommend using the original model's code for training. The relevant code links are as follows:
+GlobalDiff supports direct transfer from CBiT, Bert4Rec, SASRec and SRGNN. In fact, we recommend using the original model's code for training. The relevant code links are as follows:
 https://github.com/hw-du/CBiT/tree/master;
 https://github.com/jaywonchung/BERT4Rec-VAE-Pytorch;
 https://github.com/pmixer/SASRec.pytorch
-
+https://github.com/RUCAIBox/RecBole/blob/master/recbole/model/sequential_recommender/srgnn.py
 
